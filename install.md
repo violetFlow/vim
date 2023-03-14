@@ -3,6 +3,7 @@
 [brew](https://brew.sh)
 
 ## iterm
+[iterm2](https://iterm2.com)
 
 ## vscode
 
