@@ -14,6 +14,10 @@
 ```bash
 brew install tmux
 ```
+### fzf install
+```bash
+brew install fzf 
+```
 
 ## Text editor setting
 ### Vscode install
@@ -45,3 +49,4 @@ brew install node
 ```
 brew install go
 ```
+
