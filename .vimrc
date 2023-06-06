@@ -53,7 +53,14 @@ nnoremap <leader>s :w<CR>
 nnoremap <leader>t :below term<CR>
 nnoremap <leader>g :GFiles<CR>
 nnoremap <leader>p :set path+=$PWD/**<CR>
+nnoremap <leader>f :LspDefinition<CR>
 
 " NERDTree shortcuts
 nnoremap <C-n> :NERDTreeFind<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
+
+" Path copy
+source ~/.vim/command.vim
+" Turn off Beep
+set belloff=all
+
