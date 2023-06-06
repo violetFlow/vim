@@ -16,8 +16,8 @@ set laststatus=2 " Turn on bottom bar
 set belloff=all " Turn off Beep
 
 " Setting indent
-filetype plugin indent on " ファイルタイプに基づいたインデントを有効化
-set autoindent " 新しい行を始める時に自動でインデント
+filetype plugin indent on 
+set autoindent 
 set expandtab
 set tabstop=4
 set softtabstop=4
@@ -29,10 +29,13 @@ colorscheme jellybeans
 
 " Setting vim-plug
 call plug#begin()
+" language server protocol
 Plug 'prabirshrestha/vim-lsp'
 Plug 'mattn/vim-lsp-settings'
-Plug 'prabirshrestha/asyncomplete.vim'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+" autocomplete
+Plug 'prabirshrestha/asyncomplete.vim' 
+" command line finder
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } 
 Plug 'junegunn/fzf.vim'
 call plug#end()
 
@@ -40,18 +43,31 @@ call plug#end()
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline' " status bar
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'nanotech/jellybeans.vim'
-Plugin 'preservim/nerdtree'
-Plugin 'blueyed/vim-diminactive'
-Plugin 'godlygeek/tabular'
-Plugin 'preservim/vim-markdown'
+Plugin 'nanotech/jellybeans.vim' " color scheme
+Plugin 'preservim/nerdtree' " directory search
+Plugin 'blueyed/vim-diminactive' " focusing current window
+Plugin 'godlygeek/tabular' " making table plugin for markdown
+Plugin 'preservim/vim-markdown' " Syntax highlighting, matching rules and mappings for the original Markdown
+Plugin 'puremourning/vimspector' " debugger
 call vundle#end()
 
 " Setting vim-airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='hybrid'
+
+" Setting vim-markdown
+let g:preview_markdown_vertical = 1
+let g:vim_markdown_liquid=1
+let g:vim_markdown_frontmatter=1
+let g:vim_markdown_math=1
+au BufRead,BufNewFile *.{txt,text} set filetype=markdown
+
+" Setting asyncoplete
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr>    pumvisible() ? asyncomplete#close_popup() : "\<cr>"
 
 " Setting external vim files
 if filereadable(expand('~/.vim/command.vim'))
