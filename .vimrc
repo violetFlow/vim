@@ -24,9 +24,6 @@ set softtabstop=4
 set shiftwidth=4
 set clipboard+=unnamed
 
-" Setting color scheme
-colorscheme jellybeans
-
 " Setting vim-plug
 call plug#begin()
 " language server protocol
@@ -79,3 +76,5 @@ nnoremap <leader>f :LspDefinition<CR>
 nnoremap <C-n> :NERDTreeFind<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 
+" Setting color scheme
+colorscheme jellybeans
