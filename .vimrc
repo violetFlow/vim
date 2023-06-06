@@ -55,12 +55,6 @@ call vundle#end()
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='hybrid'
 
-" Setting vim-markdown
-let g:vim_markdown_liquid=1
-let g:vim_markdown_frontmatter=1
-let g:vim_markdown_math=1
-au BufRead,BufNewFile *.{txt,text} set filetype=markdown
-
 " Setting asyncoplete
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
