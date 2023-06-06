@@ -48,8 +48,6 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'nanotech/jellybeans.vim' " color scheme
 Plugin 'preservim/nerdtree' " directory search
 Plugin 'blueyed/vim-diminactive' " focusing current window
-Plugin 'godlygeek/tabular' " making table plugin for markdown
-Plugin 'preservim/vim-markdown' " Syntax highlighting, matching rules and mappings for the original Markdown
 Plugin 'puremourning/vimspector' " debugger
 call vundle#end()
 
@@ -58,7 +56,6 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='hybrid'
 
 " Setting vim-markdown
-let g:preview_markdown_vertical = 1
 let g:vim_markdown_liquid=1
 let g:vim_markdown_frontmatter=1
 let g:vim_markdown_math=1
